@@ -1,0 +1,9 @@
+﻿body {
+    background-color: green;
+}
+tr:nth-child(2n) {
+    background-color: grey;
+}
+tr:nth-child(2n+1) {
+    background-color: white;
+}
