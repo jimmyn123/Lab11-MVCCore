@@ -30,15 +30,22 @@ namespace Lab11_MVCCore.Models
         {
             // Creates a new list of TimePerson to return later
             List<TimePerson> people = new List<TimePerson>();
+            // creates a new path with the current directory
             string path = Environment.CurrentDirectory;
+            // combines the current directory and locates the person of the year csv.
             string newPath = Path.GetFullPath(Path.Combine(path, @"wwwroot\personOfTheYear.csv"));
+            // reads all the lines of the csv
             string[] myFile = File.ReadAllLines(newPath);
 
+            // loops through skipping the first line and parses the csv
             for (int i = 1; i < myFile.Length; i++)
             {
+                // splits each line by the commas
                 string[] fields = myFile[i].Split(',');
+                // creates a new person and adds to list
                 people.Add(new TimePerson
                 {
+                    // parses everything between commas into the appropriate fields for our person
                     Year = Convert.ToInt32(fields[0]),
                     Honor = fields[1],
                     Name = fields[2],
@@ -51,7 +58,11 @@ namespace Lab11_MVCCore.Models
                 });
             }
 
+            // LINQ lambda functions to filter to the appropriate year
             List<TimePerson> listofPeople = people.Where(p => (p.Year >= begYear) && (p.Year <= endYear)).ToList();
+
+            // returns the list of people who match
             return listofPeople;
         }
+    }
 }
