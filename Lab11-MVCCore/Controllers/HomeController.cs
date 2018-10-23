@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Lab11_MVCCore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,10 @@ namespace Lab11_MVCCore.Controllers
             return RedirectToAction("Result", new { begYear, endYear });
         }
 
-        public IActionResult Result()
+        public IActionResult Result(int begYear, int endYear)
         {
-            return View();
+            List<TimePerson> list = TimePerson.GetPersons(begYear, endYear);
+            return View(list);
         }
     }
 }

@@ -1,5 +1,10 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model List<Lab11_MVCCore.Models.TimePerson>
 @{
+    foreach(Lab11_MVCCore.Models.TimePerson person in Model)
+    {
+        <h1>@person.Name</h1>
+    }
 }
