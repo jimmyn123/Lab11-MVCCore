@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Lab11_MVCCore.Models.TimePerson>
+@{
+<html>
+    <head>
+        <title>Results!</title>
+        <link rel="stylesheet" type="text/css" href="~/style.css" />
+    </head>
+    <body>
+        <div class="display">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Honor</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Birth Year</th>
+                        <th>Death Year</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Context</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Lab11_MVCCore.Models.TimePerson person in Model)
+                    {
+                        <tr>
+                            <td>@person.Year</td>
+                            <td>@person.Honor</td>
+                            <td>@person.Name</td>
+                            <td>@person.Country</td>
+                            <td>@person.Birth_Year</td>
+                            <td>@person.DeathYear</td>
+                            <td>@person.Title</td>
+                            <td>@person.Category</td>
+                            <td>@person.Context</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
+}

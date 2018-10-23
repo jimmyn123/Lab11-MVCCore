@@ -1,0 +1,54 @@
+﻿body {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.magazine {
+    background-image: url(obama.jpg);
+    background-size: contain;
+    width: 400px;
+    height: 545px;
+    margin: 0 auto;
+}
+ 
+.opacity {
+    width: 390px;
+    height: 535px;
+    background-color: rgba(255, 255, 255, .8);
+    margin: 5px auto;
+}
+
+.forms {
+    margin: 0 auto;
+    width: 400px;
+}
+
+label, input, button{
+    display: block;
+    margin: 2px, 5px;
+}
+
+table {
+    width: 960px;
+}
+
+.display {
+    margin-top: 20px auto 0px auto;
+    width: 960px;
+}
+
+th {
+    font-size: 1.5em;
+}
+
+tr:nth-child(2n) {
+    background-color: grey;
+}
+
+tr:nth-child(2n+1) {
+    background-color: orange;
+}
+
+th {
+    background-color: grey;
+}
