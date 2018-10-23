@@ -1,8 +1,34 @@
 ﻿body {
+    margin: 0 auto;
 }
-tr:nth-child(2n) {
+
+.magazine {
+    width: 250px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.forms {
+    margin: 0 auto;
+}
+
+label, input, button{
+    display: block;
+    margin: 2px, 5px;
+}
+
+th {
+    font-size: 1.5em;
+}
+
+tr:nth-child(1){
     background-color: grey;
 }
-tr:nth-child(2n+1) {
+
+tr:nth-child(2n) {
     background-color: orange;
+}
+
+tr:nth-child(2n+1) {
+    background-color: grey;
 }
