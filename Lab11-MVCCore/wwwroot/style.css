@@ -1,5 +1,6 @@
 ﻿body {
     margin: 0 auto;
+    width: 960px;
 }
 
 .magazine {
@@ -27,18 +28,27 @@ label, input, button{
     margin: 2px, 5px;
 }
 
+table {
+    width: 960px;
+}
+
+.display {
+    margin-top: 20px auto 0px auto;
+    width: 960px;
+}
+
 th {
     font-size: 1.5em;
 }
 
-tr:nth-child(1){
+tr:nth-child(2n) {
     background-color: grey;
 }
 
-tr:nth-child(2n) {
+tr:nth-child(2n+1) {
     background-color: orange;
 }
 
-tr:nth-child(2n+1) {
+th {
     background-color: grey;
 }
