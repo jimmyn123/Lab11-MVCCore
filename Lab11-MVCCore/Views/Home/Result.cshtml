@@ -3,8 +3,35 @@
 *@
 @model List<Lab11_MVCCore.Models.TimePerson>
 @{
-    foreach(Lab11_MVCCore.Models.TimePerson person in Model)
-    {
-        <h1>@person.Name</h1>
-    }
+<table>
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Honor</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Birth Year</th>
+            <th>Death Year</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Context</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Lab11_MVCCore.Models.TimePerson person in Model)
+        {
+            <tr>
+                <td><h1>@person.Year</h1></td>
+                <td><h1>@person.Honor</h1></td>
+                <td><h1>@person.Name</h1></td>
+                <td><h1>@person.Country</h1></td>
+                <td><h1>@person.Birth_Year</h1></td>
+                <td><h1>@person.DeathYear</h1></td>
+                <td><h1>@person.Title</h1></td>
+                <td><h1>@person.Category</h1></td>
+                <td><h1>@person.Context</h1></td>
+            </tr>
+        }
+        </tbody>
+</table>
 }
